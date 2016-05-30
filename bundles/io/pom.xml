@@ -20,7 +20,7 @@
         </dependency>
         <dependency>
             <groupId>com.github.osx2000.how</groupId>
-            <artifactId>com.github.osx2000.how.io</artifactId>
+            <artifactId>com.github.osx2000.how.engine</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>

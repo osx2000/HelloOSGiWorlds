@@ -34,6 +34,15 @@
             <artifactId>com.github.osx2000.features.webconsole</artifactId>
             <version>1.0</version>
         </dependency>
+
+
+        <!-- Caution - >=3.0.0 needs Servlet API 3.1 -->
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.http.bridge</artifactId>
+            <version>2.3.2</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>

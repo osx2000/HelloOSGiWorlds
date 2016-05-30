@@ -21,7 +21,12 @@
         <module>service</module>
     </modules>
     <dependencies>
-        
+        <dependency>
+            <groupId>org.ops4j.pax.exam</groupId>
+            <artifactId>pax-exam</artifactId>
+            <version>4.9.1</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>
@@ -35,6 +40,16 @@
                 <artifactId>com.github.osx2000.how.domain</artifactId>
                 <version>1.0</version>
             </dependency>
+            <dependency>
+                <groupId>org.osgi</groupId>
+                <artifactId>osgi.cmpn</artifactId>
+                <version>6.0.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.geronimo.specs</groupId>
+                <artifactId>geronimo-jpa_2.1_spec</artifactId>
+                <version>1.0-alpha-1</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -43,7 +58,7 @@
             <plugin>
                 <groupId>biz.aQute.bnd</groupId>
                 <artifactId>bnd-maven-plugin</artifactId>
-                <version>3.2.0</version>
+                <version>3.1.0</version>
                 <executions>
                     <execution>
                         <goals>
