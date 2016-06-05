@@ -31,22 +31,17 @@
             <classifier>features</classifier>
             <version>${karaf.version}</version>
             <type>xml</type>
+            <scope>runtime</scope>
         </dependency>
-        <!--<dependency>
+        <dependency>
             <groupId>org.apache.karaf.features</groupId>
             <artifactId>enterprise</artifactId>
             <classifier>features</classifier>
             <version>${karaf.version}</version>
             <type>xml</type>
-        </dependency>-->
+            <scope>runtime</scope>
+        </dependency>
 
-        <!--<dependency>
-            <groupId>org.ops4j.pax.jdbc</groupId>
-            <artifactId>pax-jdbc-features</artifactId>
-            <classifier>features</classifier>
-            <version>0.8.0</version>
-            <type>xml</type>
-        </dependency>-->
         <dependency>
             <groupId>com.github.osx2000.how</groupId>
             <artifactId>com.github.osx2000.how.service</artifactId>
@@ -84,8 +79,8 @@
                 <artifactId>karaf-maven-plugin</artifactId>
 
                 <configuration>
-                    <addTransitiveFeatures>true</addTransitiveFeatures>
-                    <resolveDefinedRepositoriesRecursively>true</resolveDefinedRepositoriesRecursively>
+                    <!--<addTransitiveFeatures>true</addTransitiveFeatures>
+                    <resolveDefinedRepositoriesRecursively>true</resolveDefinedRepositoriesRecursively>-->
                     <!--<startupFeatures>
                     </startupFeatures>-->
                     <bootFeatures>
@@ -96,6 +91,7 @@
                         <feature>deployer</feature>
                         <feature>feature</feature>
                         <feature>jaas</feature>
+                        <feature>http</feature>
                         <feature>shell</feature>
                         <feature>log</feature>
                         <feature>management</feature>
@@ -109,10 +105,12 @@
                         <feature>war</feature>
                         <feature>service</feature>
                         <feature>eventadmin</feature>
+                        <feature>scr</feature>
                         <feature>webconsole</feature>
 
-                        <!--<feature version="2.1.0">persistence-api</feature>
-                        <feature version="4.3.6.Final">hibernate</feature>-->
+                        <!-- enterprise -->
+
+                        <feature>hibernate-envers</feature>
                     </bootFeatures>
                     <!--<installedFeatures>
                     </installedFeatures>-->
