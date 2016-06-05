@@ -16,6 +16,7 @@
         <module>cli</module>
         <module>ear</module>
         <module>web</module>
+        <module>karaf</module>
     </modules>
     <dependencies>
         

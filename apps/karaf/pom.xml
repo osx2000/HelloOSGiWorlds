@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>com.github.osx2000.how.app-master</artifactId>
+        <groupId>com.github.osx2000.how</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>com.github.osx2000.how.app-karaf</artifactId>
+    <packaging>karaf-assembly</packaging>
+
+    <properties>
+        <karaf.version>4.0.5</karaf.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <!-- scope is compile so all features (there is only one) are installed into startup.properties and the feature repo itself is not added in etc/org.apache.karaf.features.cfg file -->
+            <groupId>org.apache.karaf.features</groupId>
+            <artifactId>framework</artifactId>
+            <version>${karaf.version}</version>
+            <type>kar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.karaf.features</groupId>
+            <artifactId>standard</artifactId>
+            <classifier>features</classifier>
+            <version>${karaf.version}</version>
+            <type>xml</type>
+        </dependency>
+        <!--<dependency>
+            <groupId>org.apache.karaf.features</groupId>
+            <artifactId>enterprise</artifactId>
+            <classifier>features</classifier>
+            <version>${karaf.version}</version>
+            <type>xml</type>
+        </dependency>-->
+
+        <!--<dependency>
+            <groupId>org.ops4j.pax.jdbc</groupId>
+            <artifactId>pax-jdbc-features</artifactId>
+            <classifier>features</classifier>
+            <version>0.8.0</version>
+            <type>xml</type>
+        </dependency>-->
+        <dependency>
+            <groupId>com.github.osx2000.how</groupId>
+            <artifactId>com.github.osx2000.how.service</artifactId>
+            <version>${project.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.eclipsesource.jaxrs</groupId>
+            <artifactId>jersey-all</artifactId>
+            <version>2.22.2</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.eclipsesource.jaxrs</groupId>
+            <artifactId>publisher</artifactId>
+            <version>5.3.1</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.karaf.tooling</groupId>
+                    <artifactId>karaf-maven-plugin</artifactId>
+                    <version>${karaf.version}</version>
+                    <extensions>true</extensions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.karaf.tooling</groupId>
+                <artifactId>karaf-maven-plugin</artifactId>
+
+                <configuration>
+                    <addTransitiveFeatures>true</addTransitiveFeatures>
+                    <resolveDefinedRepositoriesRecursively>true</resolveDefinedRepositoriesRecursively>
+                    <!--<startupFeatures>
+                    </startupFeatures>-->
+                    <bootFeatures>
+                        <feature>standard</feature>-
+                        <feature>bundle</feature>
+                        <feature>config</feature>
+                        <feature>diagnostic</feature>
+                        <feature>deployer</feature>
+                        <feature>feature</feature>
+                        <feature>jaas</feature>
+                        <feature>shell</feature>
+                        <feature>log</feature>
+                        <feature>management</feature>
+                        <feature>package</feature>
+                        <feature>shell-compat</feature>
+                        <feature>ssh</feature>
+                        <feature>system</feature>
+                        <feature>wrap</feature>
+                        <feature>instance</feature>
+                        <feature>kar</feature>
+                        <feature>war</feature>
+                        <feature>service</feature>
+                        <feature>eventadmin</feature>
+                        <feature>webconsole</feature>
+
+                        <!--<feature version="2.1.0">persistence-api</feature>
+                        <feature version="4.3.6.Final">hibernate</feature>-->
+                    </bootFeatures>
+                    <!--<installedFeatures>
+                    </installedFeatures>-->
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <inherited>false</inherited>
+                <executions>
+                    <execution>
+                        <id>copy-own-bundles</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <includeScope>provided</includeScope>
+                            <includeTypes>jar</includeTypes>
+                            <outputDirectory>target/assembly/deploy</outputDirectory>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

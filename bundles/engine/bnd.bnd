@@ -1,1 +1,3 @@
 -dsannotations : *
+Export-Package: com.github.osx2000.how.service.impl
+Bundle-SymbolicName: ${project.artifactId}
