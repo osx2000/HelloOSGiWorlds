@@ -84,26 +84,28 @@
                     <!--<startupFeatures>
                     </startupFeatures>-->
                     <bootFeatures>
-                        <feature>standard</feature>-
-                        <feature>bundle</feature>
-                        <feature>config</feature>
-                        <feature>diagnostic</feature>
-                        <feature>deployer</feature>
+                        <!-- standard reduced -->
+                        <feature>wrap</feature>
+                        <feature>shell</feature>
+                        <feature>shell-compat</feature>
                         <feature>feature</feature>
                         <feature>jaas</feature>
-                        <feature>http</feature>
-                        <feature>shell</feature>
-                        <feature>log</feature>
-                        <feature>management</feature>
-                        <feature>package</feature>
-                        <feature>shell-compat</feature>
                         <feature>ssh</feature>
-                        <feature>system</feature>
-                        <feature>wrap</feature>
+                        <feature>management</feature>
+                        <feature>bundle</feature>
+                        <feature>config</feature>
+                        <feature>deployer</feature>
+                        <feature>diagnostic</feature>
+                        <feature>feature</feature>
                         <feature>instance</feature>
                         <feature>kar</feature>
-                        <feature>war</feature>
+                        <feature>log</feature>
+                        <feature>package</feature>
                         <feature>service</feature>
+                        <feature>system</feature>
+
+                        <!-- non-standard -->
+                        <feature>http</feature>
                         <feature>eventadmin</feature>
                         <feature>scr</feature>
                         <feature>webconsole</feature>
@@ -111,6 +113,8 @@
                         <!-- enterprise -->
 
                         <feature>hibernate-envers</feature>
+                        <feature>hibernate-validator</feature>
+                        <feature>jpa</feature>
                     </bootFeatures>
                     <!--<installedFeatures>
                     </installedFeatures>-->

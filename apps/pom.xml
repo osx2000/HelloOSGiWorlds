@@ -14,6 +14,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>cli</module>
+        <module>cli-minimal</module>
         <module>ear</module>
         <module>web</module>
         <module>karaf</module>

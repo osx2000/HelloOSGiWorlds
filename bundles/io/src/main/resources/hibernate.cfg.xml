@@ -31,8 +31,6 @@
         <!-- Drop and re-create the database schema on startup -->
         <property name="hbm2ddl.auto">create</property>
 
-        <mapping class="au.com.ozblog.hibernate.h2.example.User"/>
-
     </session-factory>
 
 </hibernate-configuration>
