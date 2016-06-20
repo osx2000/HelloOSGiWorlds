@@ -23,7 +23,6 @@ import java.util.Properties;
  * Created by xne0133 on 22.04.2016.
  */
 public class FrameworkUtil {
-    private static final Logger LOG = LoggerFactory.getLogger (FrameworkUtil.class);
 
     private static List<Bundle> LoadBundlesFromVFSFolder(Class clazz,
                                                          String folderName,
@@ -55,7 +54,7 @@ public class FrameworkUtil {
                     ret.add(bc.installBundle(f.asFileURI().toString(),
                             f.openStream()));
                 } catch(Exception ex) {
-                    LOG.error("Can't load " + f.getPathName());
+
                     throw ex;
                 }
             }
@@ -85,7 +84,6 @@ public class FrameworkUtil {
                                             Map<String, String> configuration,
                                             FrameworkFactory factory) {
 
-        LOG.info("Initializing OSGi Config");
 
         Properties props = System.getProperties();
         // no interactiove OSGi shell
@@ -136,7 +134,6 @@ public class FrameworkUtil {
                     b.start();
             }
             fwk.start();
-            LOG.info("OSGi Config Initialized");
 
             return fwk;
         } catch (Exception ex) {
