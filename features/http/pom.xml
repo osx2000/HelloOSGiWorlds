@@ -13,7 +13,7 @@
     <artifactId>com.github.osx2000.features.http</artifactId>
     <version>1.0</version>
     <properties>
-        <jetty.version>9.3.9.v20160517</jetty.version>
+        <jetty.version>9.2.12.v20150709</jetty.version>
     </properties>
     <packaging>jar</packaging>
 
@@ -42,12 +42,18 @@
             <version>3.0.0</version>
             <scope>runtime</scope>
         </dependency>
-        <!--<dependency>
+        <dependency>
             <groupId>org.apache.felix</groupId>
             <artifactId>org.apache.felix.http.jetty</artifactId>
             <version>3.1.0</version>
             <scope>runtime</scope>
-        </dependency>-->
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
         <dependency>
             <groupId>org.apache.felix</groupId>
             <artifactId>org.apache.felix.http.base</artifactId>
@@ -78,13 +84,14 @@
             <version>2.2.1</version>
             <scope>runtime</scope>
         </dependency>
+        <!--
         <dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-continuation</artifactId>
             <version>${jetty.version}</version>
             <scope>runtime</scope>
-        </dependency>
-        <dependency>
+        </dependency>-->
+        <!--<dependency>
             <groupId>org.eclipse.jetty</groupId>
             <artifactId>jetty-http</artifactId>
             <version>${jetty.version}</version>
@@ -137,7 +144,7 @@
             <artifactId>websocket-server</artifactId>
             <version>${jetty.version}</version>
             <scope>runtime</scope>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.ops4j.pax.web</groupId>
             <artifactId>pax-web-jetty</artifactId>

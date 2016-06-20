@@ -99,6 +99,12 @@
             <version>4.4.4</version>
             <scope>runtime</scope>
         </dependency>
+        <dependency>
+            <groupId>org.apache.felix</groupId>
+            <artifactId>org.apache.felix.log</artifactId>
+            <version>1.0.1</version>
+            <scope>runtime</scope>
+        </dependency>
     </dependencies>
 
     <build>
