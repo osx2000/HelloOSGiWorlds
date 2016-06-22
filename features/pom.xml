@@ -19,6 +19,7 @@
         <module>http</module>
         <module>logging</module>
         <module>core</module>
+        <module>math</module>
         <module>tools</module>
     </modules>
 
