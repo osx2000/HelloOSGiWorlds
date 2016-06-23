@@ -3,10 +3,12 @@ package com.github.osx2000.how.domain;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Objects;
 
 @Entity
-public class Greeting {
+@Table(name="Greeting")
+public class Greeting implements java.io.Serializable {
 
     @Id
     @Column(length = 20)
@@ -44,5 +46,17 @@ public class Greeting {
     @Override
     public int hashCode() {
         return Objects.hash(getLanguage(), getGreeting(), getTranslation());
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
+    public void setGreeting(String greeting) {
+        this.greeting = greeting;
+    }
+
+    public void setTranslation(String translation) {
+        this.translation = translation;
     }
 }

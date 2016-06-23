@@ -43,6 +43,12 @@
             <version>${project.version}</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>com.github.osx2000.how</groupId>
+            <artifactId>com.github.osx2000.how.application</artifactId>
+            <version>${project.version}</version>
+            <scope>provided</scope>
+        </dependency>
 
 
         <!-- Own features -->
@@ -85,6 +91,12 @@
         <dependency>
             <groupId>com.github.osx2000.features</groupId>
             <artifactId>com.github.osx2000.features.math</artifactId>
+            <version>1.0</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.osx2000.features</groupId>
+            <artifactId>com.github.osx2000.features.tools</artifactId>
             <version>1.0</version>
             <scope>provided</scope>
         </dependency>

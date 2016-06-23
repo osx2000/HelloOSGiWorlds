@@ -44,6 +44,7 @@ public class EntityManagerSupplier {
         props.put(EntityManagerFactoryBuilderImpl.HELLO_managedClassNames,managedClasses);
         Properties persistenceUnitProperties = new Properties();
         persistenceUnitProperties.put("hibernate.dialect",dialect);
+        persistenceUnitProperties.put("hibernate.hbm2ddl.auto","create");
         persistenceUnitProperties.put("hibernate.transaction.jta.platform",jtaPlatform);
         persistenceUnitProperties.put("hibernate.connection.url",jdbcUrl);
         persistenceUnitProperties.put("hibernate.connection.user",user);

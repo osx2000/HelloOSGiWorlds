@@ -1,7 +1,10 @@
 package com.github.osx2000.how.application;
 
 /**
- * Created by Oliver on 30/05/2016.
+ * Created by xne0133 on 23.06.2016.
  */
-public class App {
+public interface App {
+    String getGreeting(String language, String greeting);
+
+    String postGreeting(String language, String greeting, String translation);
 }
