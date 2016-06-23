@@ -7,6 +7,9 @@
     <groupId>com.github.osx2000.wrapped</groupId>
     <artifactId>com.github.osx2000.wrapped.master</artifactId>
     <version>1.0</version>
+    <properties>
+        <maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
+    </properties>
     <packaging>pom</packaging>
     <modules>
         <module>finmath</module>
@@ -37,6 +40,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
+                <version>${maven-jar-plugin.version}</version>
                 <configuration>
                     <archive>
                         <manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
