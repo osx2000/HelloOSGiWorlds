@@ -6,6 +6,7 @@
     <version>1.0-SNAPSHOT</version>
     <properties>
         <com.github.osx2000.how.domain.version>1.0</com.github.osx2000.how.domain.version>
+        <com.github.osx2000.how.interfaces.version>1.0</com.github.osx2000.how.interfaces.version>
     </properties>
     <groupId>com.github.osx2000.how</groupId>
     <artifactId>com.github.osx2000.how.root</artifactId>

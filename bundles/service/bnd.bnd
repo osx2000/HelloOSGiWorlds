@@ -1,3 +1,4 @@
 -dsannotations : *
+-metatype: *
 Export-Package: com.github.osx2000.how.service.rest
 Bundle-SymbolicName: ${project.artifactId}

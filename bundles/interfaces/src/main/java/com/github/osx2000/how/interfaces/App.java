@@ -1,8 +1,7 @@
-package com.github.osx2000.how.application;
+package com.github.osx2000.how.interfaces;
 
-/**
- * Created by xne0133 on 23.06.2016.
- */
+import org.osgi.service.metatype.annotations.Designate;
+
 public interface App {
     String getGreeting(String language, String greeting);
 

@@ -9,6 +9,7 @@
     <version>1.0</version>
     <properties>
         <maven-jar-plugin.version>3.0.2</maven-jar-plugin.version>
+        <bnd.version>3.2.0</bnd.version>
     </properties>
     <packaging>pom</packaging>
     <modules>
@@ -28,7 +29,7 @@
             <plugin>
                 <groupId>biz.aQute.bnd</groupId>
                 <artifactId>bnd-maven-plugin</artifactId>
-                <version>3.1.0</version>
+                <version>${bnd.version}</version>
                 <executions>
                     <execution>
                         <goals>
