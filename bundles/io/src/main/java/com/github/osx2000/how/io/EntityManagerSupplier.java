@@ -79,7 +79,7 @@ public class EntityManagerSupplier {
 
         Map<String,Object> props = GetDBProps(persistenceUnit,entities,url,user,password, jtaPlatform,"org.hibernate.dialect.H2Dialect","org.h2.Driver");
 
-        props.put("javax.persistence.JtaDataSource",dataSource);
+        props.put("javax.persistence.jtaDataSource",dataSource);
         return emfb.createEntityManagerFactory(props);
 
     }
