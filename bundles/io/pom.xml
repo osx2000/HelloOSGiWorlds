@@ -60,6 +60,11 @@
             <version>1.7.21</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>com.github.osx2000.wrapped</groupId>
+            <artifactId>com.github.osx2000.wrapped.jeromq</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 
     <build>

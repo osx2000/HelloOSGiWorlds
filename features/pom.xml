@@ -21,6 +21,7 @@
         <module>core</module>
         <module>math</module>
         <module>tools</module>
+        <module>communication</module>
     </modules>
 
     <dependencies>

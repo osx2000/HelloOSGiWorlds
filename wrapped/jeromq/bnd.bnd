@@ -1,0 +1,3 @@
+-dsannotations : *
+Export-Package: *
+Bundle-SymbolicName: ${project.artifactId}
