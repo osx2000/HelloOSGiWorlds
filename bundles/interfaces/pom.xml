@@ -18,7 +18,11 @@
     <packaging>jar</packaging>
 
     <dependencies>
-        
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>osgi.cmpn</artifactId>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <build>

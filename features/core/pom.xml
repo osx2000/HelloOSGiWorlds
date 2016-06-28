@@ -38,6 +38,12 @@
             <artifactId>org.apache.felix.metatype</artifactId>
             <version>1.1.2</version>
             <scope>runtime</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>net.sf.kxml</groupId>
+                    <artifactId>kxml2</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.osgi</groupId>
@@ -56,6 +62,12 @@
             <artifactId>org.apache.felix.scr</artifactId>
             <version>2.0.2</version>
             <scope>runtime</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>animal-sniffer-annotations</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.apache.felix</groupId>

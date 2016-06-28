@@ -1,6 +1,6 @@
 package com.github.osx2000.how.service.rest;
 
-import com.github.osx2000.how.application.App;
+import com.github.osx2000.how.interfaces.App;
 import org.osgi.service.component.annotations.Component;
 import org.osgi.service.component.annotations.Reference;
 

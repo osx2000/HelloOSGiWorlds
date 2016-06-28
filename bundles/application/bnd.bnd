@@ -1,3 +1,4 @@
 -dsannotations : *
-Export-Package: com.github.osx2000.how.application
+-metatype: *
+# Do not export Service implementations!
 Bundle-SymbolicName: ${project.artifactId}
